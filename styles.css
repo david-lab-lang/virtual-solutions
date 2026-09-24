@@ -544,3 +544,58 @@ summary:focus-visible {
   font-size: .75rem;
   font-weight: 600;
 }
+
+/* ---------- Comparación completa ---------- */
+.comparar { margin-top: 40px; }
+.comparar > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+.comparar > summary::-webkit-details-marker { display: none; }
+.comparar > summary::after { content: "+"; font-weight: 300; font-size: 1.25rem; text-decoration: none; }
+.comparar[open] > summary::after { content: "−"; }
+
+.tabla-scroll {
+  margin-top: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: var(--crema);
+}
+.tabla-planes {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: .875rem;
+}
+.tabla-planes th,
+.tabla-planes td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--linea);
+}
+.tabla-planes tbody tr:last-child th,
+.tabla-planes tbody tr:last-child td { border-bottom: 0; }
+.tabla-planes thead th {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.tabla-planes thead small { font-family: var(--sans); font-size: .8125rem; letter-spacing: 0; color: var(--texto-suave); }
+.tabla-planes tbody th { font-weight: 400; color: var(--texto-suave); width: 34%; }
+.tabla-planes .col-pro { background: var(--beige); }
+.tabla-planes .si { font-weight: 600; }
+.tabla-planes .no { color: var(--linea); }
+.tabla-nota { margin-top: 12px; font-size: .8125rem; color: var(--texto-suave); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
