@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Casa del Blunt · Smoke shop</title>
+  <meta name="description" content="Papeles, grinders, bolsas ziploc y bongs. Arma tu pedido en línea y confírmalo por WhatsApp. Venta solo para mayores de 18 años.">
+  <meta name="theme-color" content="#0b0a08">
+
+  <meta property="og:title" content="La Casa del Blunt · Smoke shop">
+  <meta property="og:description" content="Papeles, grinders, bolsas ziploc y bongs. Arma tu pedido y confírmalo por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Íconos e ilustraciones reutilizables.
+       Las ilustraciones de producto toman sus colores de --c1, --c2 y --c3
+       (se definen en el style de cada tarjeta). -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-casa" viewBox="0 0 44 36">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 20 22 6l19 14"/>
+        <path d="M30 11.9V7h5v8.6"/>
+        <path d="M32.5 4.5c-2-1.5 2-2.5 0-4"/>
+        <path d="M11 27h20"/>
+      </g>
+      <path d="M31 27h4" stroke="#f6c700" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-papel" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 5V3.5h10V5"/><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 9h16M8 14h8M9.5 17h5"/>
+      </g>
+    </symbol>
+    <symbol id="i-grinder" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6">
+        <ellipse cx="12" cy="6.5" rx="8" ry="3"/><path d="M4 6.5v10c0 1.7 3.6 3 8 3s8-1.3 8-3v-10M4 11.5c0 1.7 3.6 3 8 3s8-1.3 8-3"/>
+      </g>
+    </symbol>
+    <symbol id="i-ziploc" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M5 7.5h14M8.5 14h7M8.5 17h4"/>
+      </g>
+    </symbol>
+    <symbol id="i-bong" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.5 2.5h5M10.5 2.5V10L5.4 19a1.4 1.4 0 0 0 1.2 2h10.8a1.4 1.4 0 0 0 1.2-2l-5.1-9V2.5"/><path d="M19.5 9.5 14 15.5M18 8l3 3"/>
+      </g>
+    </symbol>
+    <symbol id="i-bolsa" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/>
+      </g>
+    </symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 5v14M5 12h14"/>
+    </symbol>
+    <symbol id="i-menos" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5 12h14"/>
+    </symbol>
+    <symbol id="i-cerrar" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/>
+    </symbol>
+
+    <symbol id="ilus-papel" viewBox="0 0 200 160">
+      <ellipse cx="100" cy="134" rx="66" ry="7" fill="#000" opacity=".45"/>
+      <rect x="54" y="28" width="92" height="16" rx="1.5" fill="#f4efe4"/>
+      <rect x="40" y="38" width="120" height="92" rx="5" style="fill:var(--c1,#dcc398)"/>
+      <path d="M40 43a5 5 0 0 1 5-5h110a5 5 0 0 1 5 5v17H40Z" style="fill:var(--c2,#c8a870)"/>
+      <path d="M40 60h120" stroke="#000" stroke-opacity=".25" stroke-width="1.5"/>
+      <rect x="58" y="74" width="84" height="30" rx="3" style="fill:var(--c3,#b3261e)"/>
+      <rect x="70" y="83" width="60" height="5" rx="2.5" style="fill:var(--c1,#dcc398)"/>
+      <rect x="80" y="93" width="40" height="3" rx="1.5" style="fill:var(--c1,#dcc398)" opacity=".7"/>
+      <rect x="64" y="114" width="72" height="3" rx="1.5" style="fill:var(--c3,#b3261e)" opacity=".55"/>
+      <rect x="46" y="64" width="4" height="60" rx="2" fill="#fff" opacity=".12"/>
+    </symbol>
+    <symbol id="ilus-grinder" viewBox="0 0 200 160">
+      <ellipse cx="100" cy="134" rx="62" ry="9" fill="#000" opacity=".45"/>
+      <path d="M44 62v54a56 16 0 0 0 112 0V62Z" style="fill:var(--c2,#9e2a22)"/>
+      <rect x="56" y="66" width="7" height="56" fill="#fff" opacity=".16"/>
+      <rect x="136" y="66" width="4" height="56" fill="#000" opacity=".18"/>
+      <path d="M44 81a56 16 0 0 0 112 0M44 100a56 16 0 0 0 112 0" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="2"/>
+      <path d="M44 83.5a56 16 0 0 0 112 0M44 102.5a56 16 0 0 0 112 0" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="1.5"/>
+      <ellipse cx="100" cy="62" rx="56" ry="16" style="fill:var(--c1,#d8453b)"/>
+      <ellipse cx="100" cy="62" rx="44" ry="11.5" fill="none" stroke="#000" stroke-opacity=".22" stroke-width="2"/>
+      <ellipse cx="100" cy="62" rx="12" ry="3.6" style="fill:var(--c3,#f3c5b8)" opacity=".85"/>
+      <ellipse cx="82" cy="56" rx="20" ry="3.5" fill="#fff" opacity=".22"/>
+    </symbol>
+    <symbol id="ilus-ziploc" viewBox="0 0 200 160">
+      <ellipse cx="96" cy="146" rx="60" ry="6" fill="#000" opacity=".45"/>
+      <rect x="64" y="18" width="92" height="112" rx="6" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/>
+      <path d="M70 30h80" style="stroke:var(--c1,#e53935)" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+      <rect x="46" y="30" width="96" height="112" rx="6" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+      <path d="M52 44h84" style="stroke:var(--c1,#e53935)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M52 51h84" style="stroke:var(--c1,#e53935)" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+      <rect x="60" y="100" width="68" height="28" rx="3" fill="#fff" fill-opacity=".22"/>
+      <path d="M68 110h40M68 118h28" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+      <path d="M54 60v74" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ilus-bong" viewBox="0 0 200 160">
+      <ellipse cx="100" cy="150" rx="50" ry="5" fill="#000" opacity=".45"/>
+      <path d="M70 118 60 138q-3 8 6 8h68q9 0 6-8l-10-20Z" style="fill:var(--c3,#7dc242)" fill-opacity=".35"/>
+      <path d="M90 12v66l-30 60q-3 8 6 8h68q9 0 6-8l-30-60V12Z" style="fill:var(--c1,#cfe9d8);stroke:var(--c1,#cfe9d8)" fill-opacity=".12" stroke-width="2.5" stroke-linejoin="round"/>
+      <ellipse cx="100" cy="12" rx="12" ry="3.5" fill="none" style="stroke:var(--c1,#cfe9d8)" stroke-width="2.5"/>
+      <path d="M90 40h5M90 46h5" style="stroke:var(--c1,#cfe9d8)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M147 80 108 126" style="stroke:var(--c1,#cfe9d8)" stroke-opacity=".75" stroke-width="5" stroke-linecap="round"/>
+      <path d="M136 66h22l-6 14h-10Z" style="fill:var(--c1,#cfe9d8);stroke:var(--c1,#cfe9d8)" fill-opacity=".35" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M95 20v52M68 134l14-28" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= MENÚ ================= -->
+  <header class="menu">
+    <nav class="contenedor" aria-label="Principal">
+      <a class="marca" href="#inicio">
+        <svg class="marca-casa" aria-hidden="true"><use href="#i-casa"/></svg>
+        <span class="marca-texto">La Casa del Blunt</span>
+      </a>
+      <ul class="menu-enlaces">
+        <li><a href="#papeles">Papeles</a></li>
+        <li><a href="#grinders">Grinders</a></li>
+        <li><a href="#ziploc">Ziploc</a></li>
+        <li><a href="#bongs">Bongs</a></li>
+        <li><a href="#como-pedir">Cómo pedir</a></li>
+      </ul>
+      <button class="boton-carrito" type="button" data-abrir-carrito aria-haspopup="dialog" aria-controls="carrito">
+        <svg aria-hidden="true"><use href="#i-bolsa"/></svg>
+        <span>Pedido</span>
+        <span class="contador" data-contador hidden>0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ================= HÉROE ================= -->
+    <section class="heroe" aria-labelledby="t-heroe">
+      <div class="contenedor">
+        <div class="heroe-rejilla">
+          <div>
+            <p class="antetitulo">Smoke shop · Solo mayores de 18</p>
+            <h1 class="heroe-titulo grunge" id="t-heroe">
+              <span class="blanco">Todo para</span>
+              <span class="verde">tu sesión</span>
+            </h1>
+            <p class="heroe-sub">Papeles, grinders, bolsas ziploc y bongs. <strong>Arma tu pedido aquí</strong> y confírmalo por WhatsApp.</p>
+            <div class="heroe-acciones">
+              <a class="boton" href="#papeles">Ver productos</a>
+              <a class="boton boton-fantasma" href="https://wa.me/573016631593?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Escríbenos
+              </a>
+            </div>
+          </div>
+
+          <div class="heroe-escena" aria-hidden="true">
+            <svg viewBox="0 0 600 430">
+              <defs>
+                <linearGradient id="mesa" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#4a301b"/>
+                  <stop offset=".35" stop-color="#2e1d10"/>
+                  <stop offset="1" stop-color="#140c06" stop-opacity="0"/>
+                </linearGradient>
+                <radialGradient id="luz">
+                  <stop offset="0" stop-color="#7dc242" stop-opacity=".22"/>
+                  <stop offset="1" stop-color="#7dc242" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="bordes-mesa">
+                  <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                  <stop offset=".15" stop-color="#fff"/>
+                  <stop offset=".85" stop-color="#fff"/>
+                  <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                </linearGradient>
+                <mask id="mascara-mesa">
+                  <rect width="600" height="430" fill="url(#bordes-mesa)"/>
+                </mask>
+              </defs>
+              <ellipse cx="310" cy="210" rx="290" ry="210" fill="url(#luz)"/>
+              <g mask="url(#mascara-mesa)">
+                <path d="M0 300h600v130H0z" fill="url(#mesa)"/>
+                <path d="M0 300h600" stroke="#6b4a2c" stroke-width="2"/>
+                <path d="M0 330c150 6 300-4 600 4M0 365c200-5 380 6 600-2" fill="none" stroke="#000" stroke-opacity=".25"/>
+              </g>
+              <use href="#ilus-papel" x="150" y="149" width="260" height="208" style="--c1:#1c1c1c;--c2:#2b2b2b;--c3:#e8e8e8"/>
+              <use href="#ilus-papel" x="20" y="130" width="300" height="240" style="--c1:#dcc398;--c2:#c8a870;--c3:#b3261e"/>
+              <use href="#ilus-bong" x="280" y="53" width="380" height="304" style="--c1:#cfe9d8;--c3:#7dc242"/>
+              <use href="#ilus-ziploc" x="220" y="244" width="220" height="176" style="--c1:#e53935"/>
+              <use href="#ilus-grinder" x="55" y="230" width="250" height="200" style="--c1:#d8453b;--c2:#9e2a22;--c3:#f3c5b8"/>
+            </svg>
+          </div>
+        </div>
+
+        <nav aria-label="Categorías">
+          <ul class="categorias">
+            <li><a href="#papeles"><svg aria-hidden="true"><use href="#i-papel"/></svg>Papeles</a></li>
+            <li><a href="#grinders"><svg aria-hidden="true"><use href="#i-grinder"/></svg>Grinders</a></li>
+            <li><a href="#ziploc"><svg aria-hidden="true"><use href="#i-ziploc"/></svg>Ziploc</a></li>
+            <li><a href="#bongs"><svg aria-hidden="true"><use href="#i-bong"/></svg>Bongs</a></li>
+            <li class="categorias-mas"><a href="#pronto">Y más…</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS =================
+         Para agregar un producto copia un <article class="producto"> dentro de su categoría y cambia:
+         data-id (único, sin espacios), data-precio (solo números), nombre, descripción, precio visible y colores.
+         Precios y descripciones de ejemplo: cámbialos por los reales de la tienda. -->
+
+    <section class="seccion" id="papeles" aria-labelledby="t-papeles">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="antetitulo"><span>01</span> Papeles</p>
+          <h2 class="grunge" id="t-papeles">Papeles <em>para armar</em></h2>
+          <p>Naturales, extra delgados y en varios tamaños: 1¼, king size y más.</p>
+        </header>
+        <div class="productos">
+          <article class="producto" data-id="papel-raw-114" data-precio="6000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#dcc398;--c2:#c8a870;--c3:#b3261e"><use href="#ilus-papel"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">RAW</p>
+              <h3>RAW Classic 1¼</h3>
+              <p class="producto-desc">Papel natural sin blanquear, de combustión lenta.</p>
+              <p class="precio">$6.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="papel-raw-kss" data-precio="8000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#d4b98a;--c2:#bb9960;--c3:#8e1d17"><use href="#ilus-papel"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">RAW</p>
+              <h3>RAW Classic King Size Slim</h3>
+              <p class="producto-desc">Formato largo y delgado para armar más grande.</p>
+              <p class="precio">$8.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="papel-ocb-premium" data-precio="5000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#1c1c1c;--c2:#2b2b2b;--c3:#e8e8e8"><use href="#ilus-papel"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">OCB</p>
+              <h3>OCB Premium 1¼</h3>
+              <p class="producto-desc">Ultra delgado, quema parejo y casi sin ceniza.</p>
+              <p class="precio">$5.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="papel-smoking-thinnest" data-precio="5000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#c9282d;--c2:#a11d22;--c3:#f4ede2"><use href="#ilus-papel"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Smoking</p>
+              <h3>Smoking Thinnest 1¼</h3>
+              <p class="producto-desc">Papel de arroz extra delgado, un clásico.</p>
+              <p class="precio">$5.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion banda-carbon" id="grinders" aria-labelledby="t-grinders">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="antetitulo"><span>02</span> Grinders</p>
+          <h2 class="grunge" id="t-grinders">Grinders <em>de 2 y 4 partes</em></h2>
+          <p>Metálicos con tamiz y compartimento para polen, y acrílicos para el día a día.</p>
+        </header>
+        <div class="productos">
+          <article class="producto" data-id="grinder-metal-63" data-precio="45000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#d8453b;--c2:#9e2a22;--c3:#f3c5b8"><use href="#ilus-grinder"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Metálico · 4 partes</p>
+              <h3>Grinder metálico 63 mm</h3>
+              <p class="producto-desc">Dientes afilados, tamiz fino y tapa con imán.</p>
+              <p class="precio">$45.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="grinder-metal-50" data-precio="35000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#2fa37a;--c2:#1c6e51;--c3:#bfeede"><use href="#ilus-grinder"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Metálico · 4 partes</p>
+              <h3>Grinder metálico 50 mm</h3>
+              <p class="producto-desc">Tamaño medio, fácil de llevar en el bolsillo.</p>
+              <p class="precio">$35.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="grinder-metal-40" data-precio="25000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#3a3a3a;--c2:#1d1d1d;--c3:#7dc242"><use href="#ilus-grinder"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Metálico · 4 partes</p>
+              <h3>Grinder metálico 40 mm</h3>
+              <p class="producto-desc">Compacto y resistente, ideal para viaje.</p>
+              <p class="precio">$25.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="grinder-acrilico" data-precio="10000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#f6c700;--c2:#b58f00;--c3:#fff3b0"><use href="#ilus-grinder"/></svg>
+              <span class="etiqueta">Económico</span>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Acrílico · 2 partes</p>
+              <h3>Grinder acrílico 60 mm</h3>
+              <p class="producto-desc">Liviano y práctico. Varios colores.</p>
+              <p class="precio">$10.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="ziploc" aria-labelledby="t-ziploc">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="antetitulo"><span>03</span> Ziploc</p>
+          <h2 class="grunge" id="t-ziploc">Bolsas <em>ziploc</em></h2>
+          <p>Bolsas herméticas con cierre a presión para guardar y organizar. Se venden por paquete.</p>
+        </header>
+        <div class="productos">
+          <article class="producto" data-id="ziploc-5x7" data-precio="6000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#e53935"><use href="#ilus-ziploc"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Paquete x100</p>
+              <h3>Bolsas ziploc 5 × 7 cm</h3>
+              <p class="producto-desc">Pequeñas, con zona blanca para marcar.</p>
+              <p class="precio">$6.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="ziploc-8x10" data-precio="9000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#1e88e5"><use href="#ilus-ziploc"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Paquete x100</p>
+              <h3>Bolsas ziploc 8 × 10 cm</h3>
+              <p class="producto-desc">El tamaño más práctico para el día a día.</p>
+              <p class="precio">$9.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="ziploc-10x15" data-precio="10000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#7dc242"><use href="#ilus-ziploc"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Paquete x50</p>
+              <h3>Bolsas ziploc 10 × 15 cm</h3>
+              <p class="producto-desc">Grandes y gruesas, cierran bien firmes.</p>
+              <p class="precio">$10.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="ziploc-colores" data-precio="12000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#f6c700"><use href="#ilus-ziploc"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Paquete x100</p>
+              <h3>Bolsas ziploc de colores 6 × 8 cm</h3>
+              <p class="producto-desc">Surtidas en colores para organizar por tipo.</p>
+              <p class="precio">$12.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion banda-carbon" id="bongs" aria-labelledby="t-bongs">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="antetitulo"><span>04</span> Bongs</p>
+          <h2 class="grunge" id="t-bongs">Bongs <em>de vidrio y acrílico</em></h2>
+          <p>Vidrio borosilicato resistente al calor y opciones en acrílico, con downstem y bowl.</p>
+        </header>
+        <div class="productos">
+          <article class="producto" data-id="bong-beaker-25" data-precio="120000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#cfe9d8;--c3:#7dc242"><use href="#ilus-bong"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Vidrio</p>
+              <h3>Bong beaker 25 cm</h3>
+              <p class="producto-desc">Base ancha y estable, con retenedor de hielo.</p>
+              <p class="precio">$120.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="bong-percolador-30" data-precio="180000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#9fd4ff;--c3:#4aa3df"><use href="#ilus-bong"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Vidrio</p>
+              <h3>Bong con percolador 30 cm</h3>
+              <p class="producto-desc">Doble filtrado para un golpe más suave.</p>
+              <p class="precio">$180.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="bong-mini-15" data-precio="70000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#eeeeee;--c3:#9fd4ff"><use href="#ilus-bong"/></svg>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Vidrio</p>
+              <h3>Mini bong 15 cm</h3>
+              <p class="producto-desc">Pequeño y fácil de guardar.</p>
+              <p class="precio">$70.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+          <article class="producto" data-id="bong-acrilico-30" data-precio="55000">
+            <div class="producto-imagen">
+              <svg viewBox="0 0 200 160" aria-hidden="true" style="--c1:#b388ff;--c3:#b388ff"><use href="#ilus-bong"/></svg>
+              <span class="etiqueta">No se rompe</span>
+            </div>
+            <div class="producto-cuerpo">
+              <p class="producto-tipo">Acrílico</p>
+              <h3>Bong acrílico 30 cm</h3>
+              <p class="producto-desc">Liviano y resistente a los golpes.</p>
+              <p class="precio">$55.000</p>
+              <button class="boton-agregar" type="button"><svg aria-hidden="true"><use href="#i-mas"/></svg><span>Agregar</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO PEDIR ================= -->
+    <section class="seccion" id="como-pedir" aria-labelledby="t-pedir">
+      <div class="contenedor">
+        <header class="cabecera">
+          <p class="antetitulo">Cómo pedir</p>
+          <h2 class="grunge" id="t-pedir">Pide en <em>3 pasos</em></h2>
+        </header>
+        <ol class="pasos">
+          <li class="paso">
+            <h3>Arma tu pedido</h3>
+            <p>Toca «Agregar» en los productos que quieras. Puedes cambiar cantidades en tu pedido.</p>
+          </li>
+          <li class="paso">
+            <h3>Envíalo por WhatsApp</h3>
+            <p>Tu pedido llega a nuestro chat ya escrito, con productos, cantidades y total.</p>
+          </li>
+          <li class="paso">
+            <h3>Coordinamos</h3>
+            <p>Te confirmamos disponibilidad y acordamos contigo el pago y la entrega.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= MARCAS Y PRÓXIMAMENTE ================= -->
+    <section class="seccion banda-carbon" id="pronto" aria-labelledby="t-pronto">
+      <div class="contenedor">
+        <p class="antetitulo antetitulo-centrado">Marcas que manejamos</p>
+        <ul class="marcas">
+          <li class="marca-smoking">Smoking</li>
+          <li class="marca-blunt">Blunt Wrap</li>
+          <li class="marca-clipper">Clipper</li>
+          <li class="marca-ocb">OCB</li>
+          <li class="marca-raw">RAW</li>
+        </ul>
+
+        <div class="pronto">
+          <h2 id="t-pronto">Muy pronto en la tienda</h2>
+          <ul class="chips">
+            <li>Blunts</li>
+            <li>Encendedores</li>
+            <li>Filtros</li>
+            <li>Vaporizadores</li>
+            <li>Tabaco</li>
+            <li>Inciensos</li>
+            <li>Accesorios</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="contenedor pie-rejilla">
+      <a class="marca" href="#inicio">
+        <svg class="marca-casa" aria-hidden="true"><use href="#i-casa"/></svg>
+        <span class="marca-texto">La Casa del Blunt</span>
+      </a>
+      <p class="pie-legal"><strong>Prohibida la venta a menores de 18 años.</strong> Precios en pesos colombianos, sujetos a disponibilidad.</p>
+      <a class="boton boton-fantasma" href="https://wa.me/573016631593?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <p class="contenedor pie-copy">© 2026 La Casa del Blunt</p>
+  </footer>
+
+  <!-- ================= PEDIDO (CARRITO) ================= -->
+  <dialog class="carrito" id="carrito" aria-labelledby="t-carrito">
+    <div class="carrito-panel">
+      <div class="carrito-cabecera">
+        <h2 id="t-carrito">Tu pedido</h2>
+        <button class="icono-boton" type="button" id="carrito-cerrar" aria-label="Cerrar pedido">
+          <svg aria-hidden="true"><use href="#i-cerrar"/></svg>
+        </button>
+      </div>
+      <div class="carrito-cuerpo">
+        <p class="carrito-vacio" id="carrito-vacio">Tu pedido está vacío.<br>Agrega productos para armarlo.</p>
+        <ul class="carrito-lista" id="carrito-lista"></ul>
+      </div>
+      <div class="carrito-pie">
+        <p class="carrito-total"><span>Total</span> <strong id="carrito-total">$0</strong></p>
+        <p class="carrito-nota">Confirmamos disponibilidad, pago y entrega por WhatsApp.</p>
+        <a class="boton boton-bloque" id="carrito-enviar" target="_blank" rel="noopener" aria-disabled="true">
+          <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Enviar pedido por WhatsApp
+        </a>
+        <button class="enlace-boton" type="button" id="carrito-vaciar">Vaciar pedido</button>
+      </div>
+    </div>
+  </dialog>
+
+  <template id="plantilla-linea">
+    <li class="linea">
+      <div class="linea-info">
+        <p class="linea-nombre"></p>
+        <p class="linea-precio"></p>
+      </div>
+      <p class="linea-subtotal"></p>
+      <div class="cantidad">
+        <button type="button" data-accion="menos"><svg aria-hidden="true"><use href="#i-menos"/></svg></button>
+        <output class="cantidad-valor"></output>
+        <button type="button" data-accion="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></button>
+      </div>
+    </li>
+  </template>
+
+  <!-- ================= VERIFICACIÓN DE EDAD ================= -->
+  <dialog class="edad" id="edad" aria-labelledby="t-edad" aria-describedby="d-edad">
+    <svg class="marca-casa edad-casa" aria-hidden="true"><use href="#i-casa"/></svg>
+    <p class="marca-texto">La Casa del Blunt</p>
+    <h2 id="t-edad">¿Eres mayor de 18 años?</h2>
+    <p id="d-edad">Aquí vendemos artículos para fumadores. Debes ser mayor de edad para entrar.</p>
+    <div class="edad-acciones">
+      <button class="boton" type="button" id="edad-si">Sí, soy mayor de 18</button>
+      <button class="boton boton-fantasma" type="button" id="edad-no">No</button>
+    </div>
+    <p class="edad-rechazo" role="alert">Lo sentimos. Solo puedes entrar si eres mayor de edad.</p>
+  </dialog>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+</body>
+</html>
