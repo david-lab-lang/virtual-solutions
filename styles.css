@@ -673,3 +673,29 @@ summary:focus-visible {
 .ficha .pendiente { background: var(--crema); }
 .volver { font-size: .9375rem; }
 .pie .pie-legal { max-width: none; }
+
+/* ---------- Oferta de lanzamiento ---------- */
+.oferta {
+  margin: -16px 0 32px;
+  padding: 18px 22px;
+  border: 1px solid var(--oscuro);
+  border-radius: var(--radio);
+  background: var(--crema);
+  display: grid;
+  gap: 10px;
+}
+.oferta-etiqueta {
+  justify-self: start;
+  background: var(--oscuro);
+  color: var(--crema);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.oferta p { font-size: .9375rem; }
+@media (min-width: 900px) {
+  .oferta { grid-template-columns: auto 1fr; align-items: center; gap: 20px; }
+}
