@@ -454,7 +454,7 @@ summary:focus-visible {
   .boton-bloque { width: auto; }
   .portafolio { grid-template-columns: 1fr 1fr; }
   .testimonios { grid-template-columns: 1fr 1fr; }
-  .pie-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .pie-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; }
 }
 
 @media (min-width: 900px) {
@@ -689,3 +689,29 @@ summary:focus-visible {
   .confianza { grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
 }
 .maqueta .ms-titulo { min-height: 3.45em; }
+
+/* ---------- Aviso de datos ---------- */
+.final .aviso { margin-top: 8px; max-width: 520px; font-size: .8125rem; }
+.final .aviso a { font-weight: 600; text-underline-offset: 3px; }
+
+/* ---------- Página legal ---------- */
+.legal { max-width: 760px; }
+.legal h1 { font-size: clamp(2.25rem, 7vw, 3.5rem); }
+.legal .vigencia { margin-top: 16px; color: var(--texto-suave); font-size: .9375rem; }
+.legal h2 { font-size: 1.625rem; margin: 56px 0 16px; }
+.legal p, .legal li { color: var(--texto); }
+.legal p + p { margin-top: 12px; }
+.legal ul, .legal ol { margin: 12px 0 0; padding-left: 22px; display: grid; gap: 8px; }
+.legal .ficha {
+  margin-top: 16px;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: var(--beige);
+  padding: 20px 22px;
+  display: grid;
+  gap: 6px;
+}
+.pendiente { background: var(--beige); border-bottom: 1px dashed var(--texto-suave); padding: 0 4px; }
+.ficha .pendiente { background: var(--crema); }
+.volver { font-size: .9375rem; }
+.pie .pie-legal { max-width: none; }
