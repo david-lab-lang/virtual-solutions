@@ -6,6 +6,7 @@
   <title>Virtual Solutions · Páginas web con mantenimiento mensual</title>
   <meta name="description" content="Tu página web lista en días y funcionando todos los días. Creación a tu medida y mantenimiento mensual desde $55.000. Si no te trae clientes, la ajustamos.">
   <meta name="theme-color" content="#faf9f5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23181715'/%3E%3Cpath d='M9 10l7 13 7-13' fill='none' stroke='%23faf9f5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
   <meta property="og:title" content="Virtual Solutions · Tu página web lista en días, funcionando todos los días">
   <meta property="og:description" content="Creación de páginas web a tu medida y mantenimiento desde $55.000 al mes. Si no te trae clientes, la ajustamos hasta que lo haga.">
@@ -32,7 +33,7 @@
   <!-- ================= MENÚ ================= -->
   <header class="menu">
     <nav class="contenedor" aria-label="Principal">
-      <a class="marca" href="#inicio">Virtual Solutions</a>
+      <a class="marca" href="#inicio"><span class="marca-icono" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 10l7 13 7-13"/></svg></span>Virtual Solutions</a>
       <ul class="menu-enlaces">
         <li><a href="#beneficios">Beneficios</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
@@ -48,27 +49,70 @@
 
     <!-- ================= HÉROE ================= -->
     <section class="seccion heroe banda-crema">
-      <div class="contenedor">
-        <p class="antetitulo">Creación y mantenimiento de páginas web</p>
-        <h1>Tu página web lista en días. Funcionando todos los días.</h1>
-        <p class="lead">Si no te trae clientes, la ajustamos hasta que lo haga. Nosotros la creamos, la cuidamos y la mejoramos cada mes.</p>
-        <div class="heroe-acciones">
-          <a class="boton boton-bloque" href="https://wa.me/573016631593?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n.%0A%0AMi%20nombre%20es%3A%20%0AMi%20negocio%20es%3A%20%0AMe%20interesa%3A%20crear%20mi%20p%C3%A1gina%20%2F%20mantenimiento%20%2F%20ambos" target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
-            Quiero mi página web
-          </a>
-          <a class="enlace" href="#precios">Ver planes</a>
+      <div class="contenedor heroe-grid">
+        <div>
+          <p class="antetitulo">Páginas web · Creación y mantenimiento</p>
+          <h1>Tu página web lista en días. Funcionando todos los días.</h1>
+          <p class="lead">Si no te trae clientes, la ajustamos hasta que lo haga. Nosotros la creamos, la cuidamos y la mejoramos cada mes.</p>
+          <div class="heroe-acciones">
+            <a class="boton boton-bloque" href="https://wa.me/573016631593?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n.%0A%0AMi%20nombre%20es%3A%20%0AMi%20negocio%20es%3A%20%0AMe%20interesa%3A%20crear%20mi%20p%C3%A1gina%20%2F%20mantenimiento%20%2F%20ambos" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Quiero mi página web
+            </a>
+            <a class="enlace" href="#precios">Ver planes</a>
+          </div>
+          <ul class="heroe-sellos">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cotización gratis</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mantenimiento desde $55.000/mes</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Soporte por WhatsApp</li>
+          </ul>
         </div>
-        <p class="heroe-nota">Mantenimiento desde $55.000 al mes · Cotización gratis por WhatsApp</p>
+
+        <div class="heroe-visual" aria-hidden="true">
+          <div class="navegador">
+            <div class="navegador-barra"><i></i><i></i><i></i><span class="url">🔒 tunegocio.co</span></div>
+            <div class="mini-sitio ms-oscuro">
+              <div class="ms-nav"><b></b><span></span><span></span><span></span></div>
+              <p class="ms-titulo">Tu negocio, abierto todo el día.</p>
+              <span class="ms-linea"></span><span class="ms-linea corta"></span>
+              <span class="ms-boton"></span>
+              <div class="ms-fotos"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="estado">
+            <p class="estado-titulo">Estado de tu página</p>
+            <ul>
+              <li><svg><use href="#i-check"/></svg>En línea con HTTPS</li>
+              <li><svg><use href="#i-check"/></svg>Copia de versiones: hoy</li>
+              <li><svg><use href="#i-check"/></svg>Cambio entregado en 24&nbsp;h</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= CONFIANZA ================= -->
     <!-- TEMPORAL: cambia "+50" por el número real de empresas atendidas. -->
-    <section class="seccion banda-beige" aria-label="Confianza">
+    <section class="seccion banda-beige" aria-labelledby="t-confianza">
       <div class="contenedor confianza">
-        <p class="confianza-num">+50</p>
-        <p class="confianza-texto">empresas en Colombia ya confían en nosotros para tener su página web funcionando.</p>
+        <div class="confianza-principal">
+          <p class="confianza-num">+50</p>
+          <h2 id="t-confianza" class="confianza-texto">empresas en Colombia ya confían en nosotros para tener su página web funcionando.</h2>
+        </div>
+        <ul class="garantias">
+          <li>
+            <strong>12 a 48 horas</strong>
+            <span>Respuesta por WhatsApp en días hábiles, según tu plan.</span>
+          </li>
+          <li>
+            <strong>Siempre segura</strong>
+            <span>HTTPS e historial de versiones en todos los planes.</span>
+          </li>
+          <li>
+            <strong>Hasta que funcione</strong>
+            <span>Si tu página no te trae clientes, la ajustamos.</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -113,7 +157,7 @@
           <article class="tarjeta">
             <svg class="icono" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 34l10-10 7 6 13-15" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 15h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Ajustada hasta que venda</h3>
-            <p>Si no te trae clientes, la cambiamos. Sin cobrarte de más.</p>
+            <p>Si no te trae clientes, la revisamos contigo y la cambiamos. Sin letra pequeña.</p>
           </article>
         </div>
       </div>
@@ -129,17 +173,17 @@
         <ol class="pasos">
           <li>
             <h3>Nos escribes</h3>
-            <p>Por WhatsApp nos cuentas qué vendes y a quién. Te recomendamos el plan ideal.</p>
+            <p>Por WhatsApp nos cuentas qué vendes y qué quieres en tu página.</p>
             <span class="dia">Hoy</span>
           </li>
           <li>
             <h3>Creamos tu página</h3>
-            <p>Diseñamos y escribimos. Tú revisas y pides ajustes.</p>
+            <p>Te cotizamos según lo que necesitas. Diseñamos, tú revisas y pides ajustes.</p>
             <span class="dia">En pocos días</span>
           </li>
           <li>
             <h3>La mantenemos viva</h3>
-            <p>Cada mes la cuidamos, la actualizamos y la mejoramos para traer más clientes.</p>
+            <p>Eliges tu plan de mantenimiento. Cada mes la cuidamos, la actualizamos y la mejoramos.</p>
             <span class="dia">Todos los meses</span>
           </li>
         </ol>
@@ -151,30 +195,48 @@
     <section class="seccion banda-crema" id="portafolio" aria-labelledby="t-portafolio">
       <div class="contenedor">
         <div class="encabezado">
-          <p class="antetitulo">Portafolio</p>
+          <p class="antetitulo">Portafolio · Ejemplos de diseño</p>
           <h2 id="t-portafolio">Así se puede ver la tuya.</h2>
         </div>
         <div class="portafolio">
           <article class="proyecto">
             <div class="maqueta" aria-hidden="true">
-              <div class="maqueta-barra"><i></i><i></i><i></i></div>
-              <div class="maqueta-pantalla m1"><b>Sabor casero, pedidos en un clic.</b><span></span><span></span></div>
+              <div class="navegador-barra"><i></i><i></i><i></i></div>
+              <div class="mini-sitio ms-oscuro">
+                <div class="ms-nav"><b></b><span></span><span></span></div>
+                <p class="ms-titulo">Sabor casero, pedidos en un clic.</p>
+                <span class="ms-linea"></span>
+                <span class="ms-boton"></span>
+                <div class="ms-fotos"><i></i><i></i><i></i></div>
+              </div>
             </div>
             <div class="proyecto-info"><h3>Restaurante</h3><p>Plan Pro</p></div>
             <p class="proyecto-resultado">Menú, horarios y pedidos por WhatsApp.</p>
           </article>
           <article class="proyecto">
             <div class="maqueta" aria-hidden="true">
-              <div class="maqueta-barra"><i></i><i></i><i></i></div>
-              <div class="maqueta-pantalla m2"><b>Agenda tu cita hoy mismo.</b><span></span><span></span></div>
+              <div class="navegador-barra"><i></i><i></i><i></i></div>
+              <div class="mini-sitio ms-arena">
+                <div class="ms-nav"><b></b><span></span><span></span></div>
+                <p class="ms-titulo">Agenda tu cita hoy mismo.</p>
+                <span class="ms-linea"></span>
+                <span class="ms-boton"></span>
+                <div class="ms-fotos"><i></i><i></i><i></i></div>
+              </div>
             </div>
             <div class="proyecto-info"><h3>Consultorio</h3><p>Plan Básico</p></div>
             <p class="proyecto-resultado">Servicios claros y citas directo al chat.</p>
           </article>
           <article class="proyecto">
             <div class="maqueta" aria-hidden="true">
-              <div class="maqueta-barra"><i></i><i></i><i></i></div>
-              <div class="maqueta-pantalla m3"><b>Nueva colección, envíos a todo el país.</b><span></span><span></span></div>
+              <div class="navegador-barra"><i></i><i></i><i></i></div>
+              <div class="mini-sitio ms-claro">
+                <div class="ms-nav"><b></b><span></span><span></span></div>
+                <p class="ms-titulo">Nueva colección, envíos a todo el país.</p>
+                <span class="ms-linea"></span>
+                <span class="ms-boton"></span>
+                <div class="ms-fotos"><i></i><i></i><i></i></div>
+              </div>
             </div>
             <div class="proyecto-info"><h3>Tienda</h3><p>Plan Max</p></div>
             <p class="proyecto-resultado">Catálogo actualizado cada mes.</p>
@@ -194,15 +256,15 @@
         <div class="testimonios">
           <figure class="testimonio">
             <blockquote>“En el primer mes nos llegaron pedidos por WhatsApp que antes no teníamos. Y si pido un cambio, al otro día está listo.”</blockquote>
-            <figcaption><strong>Luz Marina Restrepo</strong>Panadería La Espiga Dorada · Bucaramanga</figcaption>
+            <figcaption><span class="avatar" aria-hidden="true">LR</span><span><strong>Luz Marina Restrepo</strong>Panadería La Espiga Dorada · Bucaramanga</span></figcaption>
           </figure>
           <figure class="testimonio">
             <blockquote>“Yo no sé nada de páginas. Ellos escribieron los textos, montaron el mapa y ahora los pacientes nos encuentran en Google.”</blockquote>
-            <figcaption><strong>Andrés Felipe Gómez</strong>Clínica Dental Sonrisa Andina · Pereira</figcaption>
+            <figcaption><span class="avatar" aria-hidden="true">AG</span><span><strong>Andrés Felipe Gómez</strong>Clínica Dental Sonrisa Andina · Pereira</span></figcaption>
           </figure>
           <figure class="testimonio">
             <blockquote>“Con el catálogo, los clientes piden directo por WhatsApp. Cada mes me mandan el reporte con qué mejorar.”</blockquote>
-            <figcaption><strong>Carolina Ospina</strong>Ferretería El Roble · Manizales</figcaption>
+            <figcaption><span class="avatar" aria-hidden="true">CO</span><span><strong>Carolina Ospina</strong>Ferretería El Roble · Manizales</span></figcaption>
           </figure>
         </div>
       </div>
@@ -373,7 +435,7 @@
     <div class="contenedor">
       <div class="pie-grid">
         <div>
-          <a class="marca" href="#inicio">Virtual Solutions</a>
+          <a class="marca" href="#inicio"><span class="marca-icono" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 10l7 13 7-13"/></svg></span>Virtual Solutions</a>
           <p>Creación y mantenimiento de páginas web en Colombia.</p>
         </div>
         <div>
