@@ -281,46 +281,6 @@ summary:focus-visible {
 .proyecto-info p { font-size: .875rem; color: var(--texto-suave); text-align: right; }
 .proyecto-resultado { margin-top: 6px; font-size: .9375rem; color: var(--texto-suave); }
 
-/* ---------- Testimonios ---------- */
-.testimonios { display: grid; gap: 20px; }
-.testimonio {
-  margin: 0;
-  padding: 32px 28px;
-  border: 1px solid var(--linea-oscura);
-  border-radius: var(--radio);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 28px;
-}
-.testimonio blockquote {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 1.3125rem;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
-}
-.testimonio figcaption {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: .9375rem;
-  color: var(--texto-oscuro-suave);
-}
-.avatar {
-  flex: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--linea-oscura);
-  color: var(--texto-oscuro);
-  font-family: var(--serif);
-  font-size: 1rem;
-}
-.testimonio figcaption strong { display: block; color: var(--texto-oscuro); font-weight: 600; }
-
 /* ---------- Precios ---------- */
 .planes { display: grid; gap: 20px; align-items: start; }
 .plan {
@@ -453,7 +413,6 @@ summary:focus-visible {
   .heroe-acciones { flex-direction: row; align-items: center; gap: 28px; }
   .boton-bloque { width: auto; }
   .portafolio { grid-template-columns: 1fr 1fr; }
-  .testimonios { grid-template-columns: 1fr 1fr; }
   .pie-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; }
 }
 
@@ -477,7 +436,6 @@ summary:focus-visible {
   .pasos,
   .planes { grid-template-columns: repeat(3, 1fr); }
   .portafolio { grid-template-columns: repeat(3, 1fr); }
-  .testimonios { grid-template-columns: repeat(3, 1fr); }
   .plan-destacado { transform: translateY(-12px); }
   .flotante { display: none; }
 }
