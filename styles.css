@@ -445,25 +445,6 @@ summary:focus-visible {
   * { transition: none !important; }
 }
 
-/* ---------- Precio anterior y ahorro ---------- */
-.precio-antes {
-  margin-top: 28px;
-  font-size: .9375rem;
-  color: var(--texto-suave);
-}
-.precio-antes s { text-decoration-thickness: 1px; }
-.precio-antes + .precio { margin-top: 6px; }
-.plan-destacado .precio-antes { color: var(--texto-oscuro-suave); }
-.ahorro {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 10px;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  font-size: .75rem;
-  font-weight: 600;
-}
-
 /* ---------- Comparación completa ---------- */
 .comparar { margin-top: 40px; }
 .comparar > summary {
@@ -674,28 +655,3 @@ summary:focus-visible {
 .volver { font-size: .9375rem; }
 .pie .pie-legal { max-width: none; }
 
-/* ---------- Oferta de lanzamiento ---------- */
-.oferta {
-  margin: -16px 0 32px;
-  padding: 18px 22px;
-  border: 1px solid var(--oscuro);
-  border-radius: var(--radio);
-  background: var(--crema);
-  display: grid;
-  gap: 10px;
-}
-.oferta-etiqueta {
-  justify-self: start;
-  background: var(--oscuro);
-  color: var(--crema);
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.oferta p { font-size: .9375rem; }
-@media (min-width: 900px) {
-  .oferta { grid-template-columns: auto 1fr; align-items: center; gap: 20px; }
-}
